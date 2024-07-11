@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+a,a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+.all-block {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+body{
+    background: url(/media/1674316272_catherineasquithgallery-com-p-serii-fon-avto-foto-16\ 1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+nav{    
+  flex: 0 0 auto;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+	flex-direction: column;
+    flex: 1 0 auto;
+  }
+footer {
+	flex: 0 0 auto;
+}
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userPhoto{
+    margin: 0;
+    height: 32px;
+    width: 32px;
+}
+.userPhoto img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.user-item {
+    position: relative;
+}
+
+.userDetails {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 1;
+}
+
+.userDetails ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.userDetails li {
+    margin: 5px 0;
+}
+
+.userDetails a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.user-item:hover .userDetails {
+    display: block;
+}
+
+
+
+.map-container {
+    height: 400px;
+    border: 1px solid #ccc;
+  }
+.bg-dark{    
+    background-color: rgba(0,0,0,.125);
+}
+.card{
+    border-radius: 1.25rem;
+}
+.star{
+    fill:#fff021;
+    width: 50%;
+}
+.card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .overlay a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding:  5px 20px;
+    font-family: Playfair Display;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 18.66px;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; 
+    background: #FFFFFF99;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 1s ease;
+    text-align: center;
+}
+
+.overlay:hover {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.btn-primary{
+    background-color: inherit;
+    color: inherit;
+    border: none;
+}
+.btn-primary:hover{
+    background-color: inherit;
+    color: rgba(0,0,0,.125);
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.form{
+    background-color: #ffffff;
+}
+.form .card{
+    background-color: rgba(0,0,0,.125);
+}
+.car .card-img-top{
+    border-radius: 1.25rem;
+}
+.from-to-stop{
+    border-radius: 1.25rem;
+    background-color:rgba(0,0,0,.125);
+    padding: 15px;
+}
+
+.form-control{
+    border: none;
+    border-bottom: 2px solid  #4D4D4D;
+    border-radius: 0;
+    background-color: inherit;    
+}
+.pay-form{
+    background-color: inherit;
+}
+.pay-form .form-group{
+    border-radius: 1rem;
+    background-color: rgba(0,0,0,.125);
+}
+.pay-form .form-control{
+    border: none;
+}
+.selected {
+    border: 2px solid rgb(0, 0, 0); 
+}
+
+
+  .footer {
+    width: 100%;
+    background-color: #ffffff;
+    color: inherit;
+    padding: 0 40px;
+    text-align: center;
+  }
+  .list-unstyled a{
+    color: inherit;
+  }
+
+  .form-reg{
+    border-radius: 1.25rem;
+    background-color:rgba(0,0,0,.125);
+    padding: 15px;
+}
+.form-control-reg{
+    border: none;
+    border: 1px rgba(0,0,0,.125) solid;
+    background-color: #ffffff;
+    border-radius: 1rem;
+}
+.scrollable-list {
+    max-height: 200px; 
+    overflow-y: auto; 
+    border-radius: 1rem; 
+    padding: 10px; 
+}
+
+
+.car-list {
+    height: 100vh;
+    /* Дополнительные стили */
+    overflow-y: auto; /* Если содержимое длинное, то это позволит прокручивать список */
+}
+/* Стилизация полосы прокрутки */
+
+.scrollable-list {
+    scrollbar-width: thin; /* Тонкая полоса прокрутки */
+    scrollbar-color: transparent transparent; /* Цвет полосы прокрутки и фона (по умолчанию) */
+  }
+  
+  .scrollable-list::-webkit-scrollbar {
+    width: 12px; /* Ширина полосы прокрутки вебкит-браузерах */
+  }
+  
+  .scrollable-list::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Цвет полосы прокрутки */
+    border-radius: 6px; /* Скругление границ полосы прокрутки */
+  }
+  .car-card {
+    margin-bottom: 20px;
+}
+.car-image {
+    height: 150px; /* высота изображения авто */
+    width: inherit;
+    object-fit: cover;
+}
+.overflow-auto-car {
+    max-height: 600px; /* Выберите подходящую высоту для вашего дизайна */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.thumbnail img {
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+.btn{
+    border-radius: 1rem;
+}
+.img-about{
+    opacity: 0.5;
+}  
+.card-about{
+    border-radius: 3rem;
+}
+.supportImg{
+    max-width: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.message-container{
+    max-height: 300px; 
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.message-container::-webkit-scrollbar {
+    display: none;
+}
+.message-container {
+    scrollbar-width: none; /* для Firefox */
+}
+.promocode-container{
+    max-height: 400px; 
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.promocode-container::-webkit-scrollbar {
+    display: none;
+}
+.promocode-container {
+    scrollbar-width: none; /* для Firefox */
+}

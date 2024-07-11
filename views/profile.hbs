@@ -1,0 +1,151 @@
+
+
+<div class="container mt-4 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-3 ">
+          <div class="card text-center form">
+            <div class="border m-4 rounded-top-4 rounded-bottom-4">
+                <img id="userPhoto" src="media/user.jpg" class="card-img-top rounded-circle m-1 p-1" alt="User Photo">
+            </div>
+              <div class="card-body">
+                  <h5 class="card-title"> 
+                    <a href="#" id="changeNameIcon">
+                        {{username}}
+                        <img src="media/icon/edit-svgrepo-com.svg" alt="">
+                    </a>
+                  </h5>
+                <p id="changePhotoText">
+                    Сменить фотографию 
+                    <img src="media/icon/Rectangle 43.svg" alt="">
+                </p>
+                <input type="file" id="uploadPhoto" style="display: none;"> 
+                
+                    {{#if isAdmin}}
+                        <h1>Админ</h1>
+                    {{else}}
+                        <p class="card-text">Рейтинг пользователя</p>
+                        <p class="card-text">
+                            <span id="ratingStars">
+                                <!-- Отображение звездочек с рейтингом здесь -->
+                            </span>
+                        </p> 
+                    {{/if}}
+                                           
+              </div>
+          </div>
+      </div>
+        <div class="col-md-7">
+            <form class="rounded-5 bg-light card p-4">
+                <div class="form-group d-flex align-items-center">
+                    <label for="fullName" class="flex-grow-1 mb-0 col-3">ФИО</label>
+                    <i class="edit-icon ms-2">✏️</i>
+                    <input type="text" id="fullName"  value="{{user.FIO}}" class="form-control flex-grow-1 ms-2" disabled>
+                    <i class="check-icon ms-2" style="display: none">✅</i>
+                </div>
+                <div class="form-group d-flex align-items-center">
+                    <label for="phoneNumber" class="flex-grow-1 mb-0 col-3">Номер телефона</label>
+                    <i class="edit-icon ms-2">✏️</i>
+                    <input type="text" id="phoneNumber" value="{{user.PhoneNumber}}" class="form-control flex-grow-1 ms-2" disabled>
+                    <i class="check-icon ms-2" style="display: none">✅</i>
+                </div>
+                <div class="form-group d-flex align-items-center">
+                    <label for="email" class="flex-grow-1 mb-0 col-3">Email</label>
+                    <i class="edit-icon ms-2">✏️</i>
+                    <input type="text" id="email" value="{{user.Email}}" class="form-control flex-grow-1 ms-2" disabled>
+                    <i class="check-icon ms-2" style="display: none">✅</i>
+                </div>
+            <div class="form-group d-flex align-items-center">
+                <label for="paymentMethod" class="flex-grow-1 mb-0 col-3">Способ оплаты по умолчанию</label>
+                <i class="edit-icon ms-2">✏️</i>
+                <select id="paymentMethod" class="form-control flex-grow-1 ms-2">
+                    <option value="cash">Наличные</option>
+                    <option value="card">Кредитная карта</option>
+                </select>
+                <input type="text" id="cardNumber" class="form-control flex-grow-1 ms-2" style="display: none;" placeholder="Введите номер карты" disabled>
+                <i class="check-icon ms-2" style="display: none">✅</i>
+            </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Обновить профиль</button>
+                    </div>
+                </div>
+            </form>
+
+            {{#if isAdmin}}
+            <div class="d-flex justify-content-center align-items-center col-12">
+            <h1 class="col-4">Команда:</h1>
+                <h3 class="d-flex flex-column col-8">
+                    <a href="https://vk.com/skyfall01">наставник</a>
+                    <a href="https://vk.com/tupabodya">дизайн</a>
+                    <a href="https://vk.com/dwermast126">бэк</a>
+                    <a href="https://vk.com/id292252866">фронт/бэк</a>
+                    
+                </h3>
+            </div>
+            {{else}}
+                <div class="row mt-4 card p-4">
+                <div class="col-md-12">
+                    <h2 class="row justify-content-center ">История поездок</h2>
+                    <div class="scrollable-list card form">
+                        <table class="table ">
+                            <tbody>
+                                <tr>
+                                    <td>01.01.2023</td>
+                                    <td>15:00</td>
+                                    <td>Улица А</td>
+                                    <td>Площадь Б</td>
+                                    <td>$20</td>
+                                    <td>Кредитная карта</td>
+                                </tr>
+                                <tr>
+                                    <td>05.03.2023</td>
+                                    <td>08:30</td>
+                                    <td>Домой</td>
+                                    <td>Работа</td>
+                                    <td>$15</td>
+                                    <td>Наличные</td>
+                                </tr>
+                                <tr>
+                                    <td>05.03.2023</td>
+                                    <td>08:30</td>
+                                    <td>Домой</td>
+                                    <td>Работа</td>
+                                    <td>$15</td>
+                                    <td>Наличные</td>
+                                </tr>
+                                <tr>
+                                    <td>05.03.2023</td>
+                                    <td>08:30</td>
+                                    <td>Домой</td>
+                                    <td>Работа</td>
+                                    <td>$15</td>
+                                    <td>Наличные</td>
+                                </tr>
+                                <tr>
+                                    <td>05.03.2023</td>
+                                    <td>08:30</td>
+                                    <td>Домой</td>
+                                    <td>Работа</td>
+                                    <td>$15</td>
+                                    <td>Наличные</td>
+                                </tr>
+                                <tr>
+                                    <td>05.03.2023</td>
+                                    <td>08:30</td>
+                                    <td>Домой</td>
+                                    <td>Работа</td>
+                                    <td>$15</td>
+                                    <td>Наличные</td>
+                                </tr>
+                                <!-- Добавьте другие поездки в соответствии с вашими данными -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            
+        </div>
+    </div>
+</div>
